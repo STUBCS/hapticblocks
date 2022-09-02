@@ -94,7 +94,7 @@ namespace haptic {
     /**
      * Creates a haptic sparkles animation and buzz effect".
      */
-    //% blockId=buzzicles block="buzzicles %bztime.defl=1000 ms" weight=70
+    //% blockId=buzzicles block="buzzicles %bztime ms" weight=70
     export function buzzicles(bztime :number): void {  
     
         loops.everyInterval(bztime, function() {
