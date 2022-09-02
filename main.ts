@@ -97,7 +97,7 @@ namespace haptic {
     //% blockId=buzzicles block="buzzicles %bztime ms" weight=70
     export function buzzicles(bztime :number): void {  
     
-        loops.everyInterval(bztime, function() {
+       
             let spark = 0
             let ledSpark = 0
             let plotSparkx = 0
@@ -110,7 +110,7 @@ namespace haptic {
             plotsparky = randint(0, ledSpark)
             led.setBrightness(randint(0, 255))
             led.toggle(plotSparkx, plotsparky)
-        })
+            basic.pause(bztime)
     }
 
     /**
