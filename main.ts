@@ -94,23 +94,25 @@ namespace haptic {
     /**
      * Creates a haptic sparkles animation and buzz effect".
      */
-    //% blockId=buzzicles block="buzzicles %bztime.defl=500" weight=70
+    //% blockId=buzzicles block="buzzicles %bztime" weight=70
     export function buzzicles(bztime :number): void {  
+    
+        loops.everyInterval(bztime, function() {
+            let spark = 0
+            let ledSpark = 0
+            let plotSparkx = 0
+            let plotsparky = 0
+            spark = randint(300, 1023)
+            pins.analogWritePin(AnalogPin.P2, spark)
+            basic.pause(200)
+            ledSpark = Math.map(spark, 0, 1023, 0, 6)
+            plotSparkx = randint(0, ledSpark)
+            plotsparky = randint(0, ledSpark)
+            led.setBrightness(randint(0, 255))
+            led.toggle(plotSparkx, plotsparky)
+        })
     }
-    loops.everyInterval(500, function() {
-        let spark = 0
-        let ledSpark = 0
-        let plotSparkx = 0
-        let plotsparky = 0
-        spark = randint(300, 1023)
-        pins.analogWritePin(AnalogPin.P2, spark)
-        basic.pause(200)
-        ledSpark = Math.map(spark, 0, 1023, 0, 6)
-        plotSparkx = randint(0, ledSpark)
-        plotsparky = randint(0, ledSpark)
-        led.setBrightness(randint(0, 255))
-        led.toggle(plotSparkx, plotsparky)
-})
+
     /**
    * Converts a Sound level into a Buzz representaion.
    */
