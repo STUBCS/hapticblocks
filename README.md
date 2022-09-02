@@ -4,6 +4,7 @@ to provide feedback to students with hearing difficulties.
 The block send a digital or PWM signal to P2.
 The device use is a prototype, using the Monk Makes Switch board and a
 vibration motor - Full details are available at - ww.computeratschool.org.uk 
+These block can be used with any vibration motor connected to P2
 
 
 > Open this page at [https://stubcs.github.io/hapticblocks/](https://stubcs.github.io/hapticblocks/)
