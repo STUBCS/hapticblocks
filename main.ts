@@ -95,7 +95,7 @@ namespace haptic {
      * Creates a haptic sparkles animation and buzz effect. The higher
      * the number the longer the animation".
      */
-    //% blockId=buzzicles block="buzzicles %bzlen.defl=100" weight=70
+    //% blockId=buzzicles block="buzzicles %bzlen=100" weight=70
     export function buzzicles(bzlen :number): void {  
         for (let index = 0; index < bzlen; index++) {
             let spark = 0
