@@ -94,9 +94,9 @@ namespace haptic {
     /**
      * Creates a haptic sparkles animation and buzz effect".
      */
-    //% blockId=buzzicles block="buzzicles" weight=70
-    export function buzzicles(): void {  
-    
+    //% blockId=buzzicles block="buzzicles %bzlen" weight=70
+    export function buzzicles(bzlen :number): void {  
+        for (let index = 0; index < bzlen; index++) {
             let spark = 0
             let ledSpark = 0
             let plotSparkx = 0
@@ -109,7 +109,7 @@ namespace haptic {
             plotsparky = randint(0, ledSpark)
             led.setBrightness(randint(0, 255))
             led.toggle(plotSparkx, plotsparky)
-            
+        }    
     }
 
     /**
