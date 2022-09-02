@@ -1,8 +1,10 @@
 /**
- * Functions are mapped to blocks using various macros
- * in comments starting with %. The most important macro
- * is "block", and it specifies that a block should be
- * generated for an **exported** function.
+ * These blocks have been created to support a prototype device
+ * idea that provides Haptic feedback .Aimed at students with 
+ * hearing dificulties. But can be used by anyone. The block send
+ * digital or PWM signal to P2. The prototype uses the Monk Makes
+ * switch board and vibration motor. Full details can be found
+ * at www. computingatschool.co.uk/
  */
 
 
@@ -92,9 +94,10 @@ namespace haptic {
     /**
      * Creates a haptic sparkles animation and buzz effect".
      */
-    //% blockId=buzzicles block="buzzicles" weight=70
-    export function buzzicles(): void {
+    //% blockId=buzzicles block="buzzicles %index" weight=70
+    export function buzzicles(%ndex): void {
 
+        loops.everyInterval(%index, function () {
         let spark = 0
         let ledSpark = 0
         let plotSparkx = 0
@@ -107,6 +110,7 @@ namespace haptic {
         plotsparky = randint(0, ledSpark)
         led.setBrightness(randint(0, 255))
         led.toggle(plotSparkx, plotsparky)
+        }
     }
 
     /**
